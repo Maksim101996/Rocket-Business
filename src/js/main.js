@@ -1,4 +1,8 @@
 "use strict"
+import Swiper, { Navigation, Pagination } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import "../scss/style.scss"
 
 // Меню
@@ -50,6 +54,7 @@ function showHide(openMenu, closeMenu) {
 
 //----------------------------------SWIPER-------------------------------------------------------------------
 const mySwiper = new Swiper('.swiper', {
+	modules: [Navigation, Pagination],
 	navigation: {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev'
